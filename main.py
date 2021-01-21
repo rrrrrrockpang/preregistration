@@ -1,6 +1,16 @@
+import pandas as pd
 import tea
 
-tea.data("./df.csv", key="worker_id")
+## Preregistration: https://osf.io/bmer9/
+## Split Dataset at https://github.com/jhofman/visual-effects-chi2020/tree/master
+# df = pd.read_csv('data/df.csv', index_col=0)
+# for i, g in df.groupby('text_condition'):
+#     name = 'data/' + i + '.csv'
+#     g.to_csv(name)
+#################################################
+
+## Run Tea on separate conditions
+tea.data("data/show_viz_stats_only.csv", key="worker_id")
 
 variables = [
     {
